@@ -1,0 +1,20 @@
+.sm-plus-container {
+    width: 44px;
+    height: 44px;
+}
+
+i.ion-android-close, i.ion-android-add {
+    font-size: 2.2em;
+    line-height: 44px;
+}
+
+i.ion-android-close {
+    margin: 0 auto;
+}
+
+i.ion-android-add {
+    color: $green;
+    font-size: 2.4em;
+    position: relative;
+    left: 23px;
+}

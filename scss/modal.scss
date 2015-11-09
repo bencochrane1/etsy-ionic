@@ -1,0 +1,103 @@
+.sm-modal-container {
+    width: 44px;
+    height: 44px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    text-align: center;
+}
+
+.sm-modal {
+
+    background-color: $lightestgrey;
+
+    &-header {
+        background-color: $white;
+        color: $darkpurple;
+        border-bottom: 0px;
+    }
+    &-subheader {
+        background-color: $white;
+        padding: 10px;
+        &-maintitle {
+            color: $darkpurple;
+            font-size: 1.6em;
+        }
+
+        &-subtitle {
+            font-size: 0.7em;
+            color: $darkpurple;
+        }
+    }
+}
+
+ion-header-bar.sm-modal-header {
+  background-image: linear-gradient(0deg, #fff, #fff 50%, transparent 50%);
+}
+
+.scroll {
+  height: 110%;
+}
+
+.flip-container {
+        perspective: 1000;
+}
+
+.flip-container.goflip .flipper {
+        transform: rotateY(180deg);
+}
+
+//iphone 6 plus
+@media only screen and (max-width : 414px) {
+    .flip-container, .front, .back {
+        width: 414px;
+        height: 736px;
+    }
+}
+
+//iphone 6
+@media only screen and (max-width : 375px) {
+    .flip-container, .front, .back {
+        width: 375px;
+        height: 667px;
+    }
+}
+
+//iphone 5
+@media only screen and (max-width : 320px) and (device-aspect-ratio: 40/71) {
+    .flip-container, .front, .back {
+        width: 320px;
+        height: 568px;
+    }
+}
+
+//iphone 4
+@media only screen and (max-width : 320px) and (device-aspect-ratio: 2/3) {
+    .flip-container, .front, .back {
+        width: 320px;
+        height: 480px;
+    }
+}
+
+.flipper {
+    transition: 0.6s;
+    transform-style: preserve-3d;
+    position: relative;
+}
+
+.front, .back {
+    backface-visibility: hidden;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.front {
+    z-index: 2;
+    transform: rotateY(0deg);
+}
+
+.back {
+    transform: rotateY(180deg);
+}

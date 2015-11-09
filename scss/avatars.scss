@@ -1,0 +1,30 @@
+.sm-avatar {
+    height: 24px;
+    width: 24px;
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    margin: 0 auto;
+
+    &--unfilled {
+        border: 2px solid $lightpurple;
+        span {
+            margin: 2px auto;
+            color: $lightpurple;
+        }
+
+        &--bold {
+            background-color: $lightpurple;
+            border: none;
+            span {
+                margin: 2px auto;
+                color: $white;
+                line-height: 25px;
+            }            
+        }
+    }
+
+    &-details-block {
+      text-transform: capitalize;
+    }
+}

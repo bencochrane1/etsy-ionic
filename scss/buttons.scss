@@ -1,0 +1,60 @@
+.button {
+
+    &-main {
+        text-transform: uppercase;
+        font-size: 0.8em;
+        height: 44px;
+        line-height: 44px;
+        width: 100%;
+    }
+
+    &-light {
+        text-align: center;
+        background-color: $white;
+        border-radius: 2px;
+        &-green {
+            border: 1px solid $green;
+            color: $green;         
+        }
+        &-purple {
+            border: 1px solid $lightpurple;
+            color: $lightpurple;         
+        }        
+
+    }
+
+    &-dark {
+        text-align: center;
+        background-color: $green;
+        border-radius: 2px;
+        &-green {
+            color: $white;  
+        }
+        &-purple {
+            color: $lightpurple;         
+        }           
+    }
+}
+
+.sm-small-edit-button {
+    margin: 18px 10px;
+    .button-main.button-light.button-light-green {
+        height: 25px;
+        line-height: 25px;        
+    }
+    &-details {
+        padding: 0 10px;
+    }    
+}
+
+.sm-small-swap-button {
+    margin: 10px 0 10px 15px;
+    .button-main.button-light.button-light-purple {
+        height: 25px;
+        line-height: 25px;        
+    }
+    &-details {
+        padding: 0 10px;
+        min-width: 90px;
+    }    
+}

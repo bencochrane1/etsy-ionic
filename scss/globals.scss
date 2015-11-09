@@ -1,0 +1,28 @@
+html, body {
+    font-family: 'Nunito', sans-serif;
+    height: 100%;
+}
+
+h1, h2 {
+    color: #1D1D26;
+    text-transform: uppercase;
+    font-weight: 400;
+    // margin: 0;
+}
+
+h3 {
+    color: $midgrey;
+    font-weight: 400;
+    font-size: 0.75em;    
+}
+
+h1 {
+    font-size: 0.8em;
+    line-height: 44px;
+    letter-spacing: 2px;
+}
+
+h2 {
+    font-size: 0.9em;
+    line-height: 5px;
+}

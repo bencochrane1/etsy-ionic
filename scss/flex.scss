@@ -1,0 +1,13 @@
+/* FLEX BOX */
+.flex-column, .flex-row { display: flex; flex-basis: auto; }
+.flex-column { flex-direction: column; }
+.flex-row { flex-direction: row; }
+.flex-grow { flex-grow: 1; }
+.flex-align-center { align-items: center; }
+.flex-content-center { align-content: center; }
+.flex-justify-center { justify-content: center; }
+.flex-justify-start { justify-content: flex-start; }
+.flex-justify-right { justify-content: flex-end; }
+.flex-align-bottom { align-items: flex-end; }
+.flex-shrink { flex-shrink: 1; }
+.flex-basis { flex-basis: 0%; }

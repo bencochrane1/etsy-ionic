@@ -1,0 +1,150 @@
+ion-content.scroll-content.ionic-scroll.has-header.has-tabs {
+    background-color: $lightestgrey;
+}
+
+.sm-shifts .scroll {
+    background-color: $white;
+}
+
+.sm-section-header {
+    background-color: $lightgrey;
+    height: 44px;
+    padding-left: 10px;
+    &-shiftday {
+        line-height: 15px;
+        &-time {
+           line-height: 0;
+        }
+    }
+}
+
+.sm-subtitle-header {
+    padding: 10px 10px 0 10px;
+}
+
+.sm-date-headers {
+
+    &-dates {
+        margin: 0 10px;
+    }
+
+    div * {
+        margin: 0 auto;
+    }
+
+    &-day {
+        text-transform: capitalize;
+        font-size: 0.8em;
+        color: $midgrey;
+        line-height: 15px;
+    }
+
+    &-date {
+        text-align: center;
+        color: $darkgrey;
+        font-size: 0.9em;
+    }
+
+    &-shifts {
+        margin: 0 10px;
+    }
+
+    &-block {
+        background-color: $lightestgrey;
+        width: 50%;
+        height: 0;
+        padding-bottom: 13%;
+        border: 1px solid $white;
+
+        &-div {
+            width: 100%;
+        }
+    }
+
+    &-shift {
+        padding-bottom: 47%;
+        height: 50%;
+        width: 100%;
+
+        &-container {
+            width: 100%;
+        }
+
+        &-unfilled {
+            background-color: $lightpurple;
+            color: $white;
+            text-align: center;
+        }
+    }
+}
+
+.shift-clicked {
+  background-color: $midgrey;
+}
+
+.shifts-button-container {
+    max-width: 100%;
+    padding: 10px;
+    &--left {
+        margin-right: 2px;
+    }
+    &--right {
+        margin-left: 2px;
+    }
+}
+
+.spacer {
+    &-5 {
+        width: 5px;
+    }
+}
+
+.sm-shiftday {
+    &-period {
+        margin: 10px;
+        min-width: 70px;
+
+        &--unfilled {
+            border-left: 4px solid $lightpurple;
+        }
+        &--filled {
+            border-left: 4px solid $green;
+        }
+        &-container {
+            background-color: $lightestgrey;
+            margin: 5px 0; 
+
+            &-edit-row {
+                background-color: $white;              
+            }           
+        }
+    }
+
+    &-resources {
+        text-transform: capitalize;
+        h3 {
+            margin: 4px auto 3px;
+        }
+        h3.resource-name {
+            margin: 4px auto 2px;
+        }
+        div:first-of-type {
+            margin: 0 2px;
+        }
+    }
+
+}
+
+.sm-list-header {
+    margin: 5px 10px 10px 10px;
+    border-bottom: 1px solid $lightgrey;
+
+    &-text {
+        color: $darkgrey;
+        line-height: 44px;
+    }
+}
+
+.shiftday {
+    background-color: $lightestgrey;
+}

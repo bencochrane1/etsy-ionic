@@ -1,0 +1,85 @@
+.sm-shiftday-suggested {
+    margin: 10px;
+    h1 {
+        color: $midgrey;
+        margin-bottom: 0;
+    }
+
+    &-inner-container {
+        border-bottom: 1px solid $lightestgrey;
+
+        h3 {
+            margin-bottom: 0px;
+            text-transform: capitalize;
+            line-height: 44px;
+            font-size: 1em;
+        }
+    }
+}
+
+i.ion-android-search {
+    font-size: 1.8em;
+    line-height: 44px; 
+    color: $midgrey;  
+    margin-right: 5px;
+}
+
+.sm-search {
+    &-input {
+        width: 90%;   
+        margin-top: 5px;     
+    }
+
+    &-option {
+        margin: 10px 10px 0 10px;
+        h3 {
+            margin-bottom: 0;
+        }
+
+        p {
+            margin-bottom: 0;
+            font-size: 0.9em;
+            color: $darkgrey;
+            text-transform: capitalize;
+        }
+        &-bottom {
+            border-bottom: 1px solid $lightestgrey;
+            padding-bottom: 10px;
+        }
+    }
+
+    &-avatar {
+        height: 30px;
+        width: 30px;
+        border-radius: 50%;
+        background-repeat: no-repeat;
+        background-position: center center;
+        margin: 0 10px 0 0;   
+        &-agency {
+            border: 2px solid $orange;
+        }     
+    }  
+}
+
+.ion-ios-checkmark, .ion-ios-circle-outline {
+    font-size: 2.4em;  
+}
+
+.ion-ios-checkmark {
+    color: $green;
+}
+
+.ion-ios-circle-outline {
+    color: $midgrey;
+}
+
+.sm-suggest-search-container {
+    box-shadow: 0px 2px 2px 0px $lightgrey;
+    background-color: $white;
+    margin: 10px 10px 20px 10px;    
+
+    &-for-modal {
+        margin: 0;
+        box-shadow: none;
+    }
+}

@@ -1,0 +1,10 @@
+{
+  "appId": "etsyionic",
+  "apiKey": "9b44a8e4eb18c2700ff84dbf4beaa2e4bdd06949b07899f868d0229f4764cd6d",
+  "public": "./",
+  "ignore": [
+    "stamplay.json",
+    "**/.*",
+    "**/node_modules/**"
+  ]
+}

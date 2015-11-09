@@ -1,0 +1,10 @@
+.tab-item.tab-item-active {
+    
+    & span.tab-title {
+        color: $darkpurple;
+    }
+
+    & i {
+        color: $darkpurple;
+    }    
+}

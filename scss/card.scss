@@ -1,0 +1,91 @@
+.sm-card {
+  background-color: $white;
+  min-height: 20px;
+  margin: 10px 10px 0 10px;
+  box-shadow: 0px 2px 2px 0px $lightgrey;
+
+  &-close-container {
+    height: 44px;
+    width: 44px;
+
+    i.ion-android-close {
+      font-size: 1.6em;
+      color: $midgrey;
+    }
+  }
+
+  &-avatar {
+    padding: 5px 0 0 10px;
+
+    &-container {
+      margin: 0 10px;
+      border-bottom: 1px solid $lightgrey;
+
+      .sm-avatar--unfilled {
+        height: 33px;
+        width: 33px;
+        border: 2px solid $white;
+        background-color: $lightpurple;
+        span {
+          margin: 5px auto;
+          color: $white;
+          font-size: 1.3em;
+        }
+      }
+    }
+  }
+
+  &-skills {
+    overflow: scroll;
+    white-space: nowrap;
+    margin: 10px;
+
+    &-counter {
+      margin: 10px 0 0 10px;
+      h3 {
+        margin-bottom: 0;
+      }
+    }
+
+    &-item {
+      color: $midgrey;
+      margin: 0 40px;
+      width: 66px;
+
+      &:first-of-type {
+        margin: 0 40px 0 5px;
+      }
+
+      i {
+        color: $midgrey;
+        font-size: 4em;
+      }
+
+      h3 {
+        margin-bottom: 0;
+        text-transform: capitalize;
+      }
+
+      &--selected {
+        color: $green;
+
+        h3 {
+          color: $green;
+
+        }
+        i {
+          color: $green;
+        }
+      }
+
+      &-icon {
+        margin: 0 auto;
+
+        &-spacer {
+          min-width: 40px;
+        }
+      }
+    }
+
+  }
+}

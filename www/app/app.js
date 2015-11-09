@@ -32,8 +32,6 @@ angular
   });
 })
 
-.constant('APPID', 'etsyapp')
-.constant('APIKEY','b85d2552e92505fcb3aab6090fabfc9c88facead8cfbda2dd1f22302b6cebc96')
 .constant('BASEURL', 'https://etsyapp.stamplayapp.com/api/cobject/v1')
 
 .controller('MainController', MainController);

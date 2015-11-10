@@ -1,6 +1,6 @@
 angular.module('OrderService', [])
 
-.factory('Order', OrderService, Promise)
+.factory('Order', OrderService)
 
 function OrderService($stamplay, $q, $http) {
   return {

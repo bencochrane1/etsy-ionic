@@ -1,7 +1,7 @@
 {
-  "appId": "etsyionic",
-  "apiKey": "9b44a8e4eb18c2700ff84dbf4beaa2e4bdd06949b07899f868d0229f4764cd6d",
-  "public": "./www/",
+  "appId": "etsyapp",
+  "apiKey": "b85d2552e92505fcb3aab6090fabfc9c88facead8cfbda2dd1f22302b6cebc96",
+  "public": "www/",
   "ignore": [
     "stamplay.json",
     "**/node_modules/**"

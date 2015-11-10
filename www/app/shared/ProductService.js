@@ -1,8 +1,8 @@
 angular.module('ProductService', [])
 
-.factory('Product', ProductService, Promise);
+.factory('Product', ProductService);
 
-function ProductService($stamplay, $q, $http, BASEURL) {
+function ProductService($stamplay, $q, $http) {
 
   return {
     all: all,
@@ -21,31 +21,12 @@ function ProductService($stamplay, $q, $http, BASEURL) {
     var products = new Stamplay.Cobject('products').Collection;
     products.populate().fetch()
     .then(function() {
+      console.log('heres all the products: ', products);
         deferred.resolve(products);
     });
 
     return deferred.promise;
   }
-
-
-  // function all() {
-  //   var deferred = $q.defer();
-  //   var requestData = {
-  //     method: 'GET',
-  //     url: BASEURL + '/products'
-  //   }
-  //   // console.log('gets')
-  //   Promise.resolve(requestData)
-  //   .then(function(response) {
-  //     console.log('response: ', response);
-  //   })
-  //   .catch(function() {
-  //     console.log('no data back here');
-  //   });
-
-  //   return deferred.promise;
-  // }
-
 
   function get(id) {
     var deferred = $q.defer();

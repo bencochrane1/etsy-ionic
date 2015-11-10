@@ -1,6 +1,6 @@
 angular
     .module('UserService', [])
-    .factory('User', UserService, Promise);
+    .factory('User', UserService);
 
 function UserService($stamplay, $q) {
 
@@ -17,11 +17,13 @@ function UserService($stamplay, $q) {
      */
     function getCurrent() {
         var def = $q.defer();
-
+        console.log('we are in getcurrent')
         // instantiate a new user model from the stamplay js sdk
         var user = $stamplay.User().Model;
+        console.log('we are in getcurrent', user)
         user.currentUser()
             .then(function() {
+              console.log('we are in getcurrent then', user)
                 // send the entire user model back
                 def.resolve(user);
             });

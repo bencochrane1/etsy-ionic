@@ -2,12 +2,12 @@ angular
     .module('app.home', [])
     .controller('HomeController', HomeController);
 
-function HomeController(Product, $q, Promise) {
+function HomeController(Product, $q, $cordovaOauth, $cordovaFacebook) {
 
   console.log('we are here')
     var home = this;
     home.deleteProduct = deleteProduct;
-
+    home.facebookLogin = facebookLogin;
 
     Product.all()
     .then(function(data) {

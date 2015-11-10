@@ -1,68 +1,91 @@
 angular
     .module('app.routes', [])
-    .config(['$stateProvider', '$urlRouterProvider', '$locationProvider', AppRoutes]);
+    .config(['$stateProvider', '$urlRouterProvider', AppRoutes]);
 
 /**
  * Create all the application routes
  */
-function AppRoutes($stateProvider, $urlRouterProvider, $locationProvider) {
+function AppRoutes($stateProvider, $urlRouterProvider) {
 
     // pretty Angular URLs
-    $locationProvider.html5Mode(true);
 
     // the route people are sent to when they are lost
     // the home page in this case
-    $urlRouterProvider.otherwise('/');
+    $urlRouterProvider.otherwise('/tab/home');
 
     // create our routes, set the view, pull in the controller
     $stateProvider
 
+        .state('tab', {
+            url: '/tab',
+            abstract: true,
+            templateUrl: 'templates/tabs.html'
+        })
+
         // home page
-        .state('home', {
-            url         : '/',
-            templateUrl : '/app/components/home/home.html',
-            controller  : 'HomeController as home'
+        .state('tab.home', {
+            url: '/home',
+            views: {
+              'tab-home': {
+                templateUrl : 'app/components/home/home.html',
+                controller  : 'HomeController as home'
+              }
+            }
         })
 
         // shop page
-        .state('shop', {
-            url         : '/shop/{name}',
-            templateUrl : '/app/components/shop/shop.html',
-            controller  : 'ShopController as shop'
+        .state('tab.shop', {
+            url: '/shop/{name}',
+            views: {
+              'tab-shop': {
+                templateUrl : 'app/components/shop/shop.html',
+                controller  : 'ShopController as shop'
+              }
+            }
         })
 
         // product page (a child of shop)
-        .state('product', {
-            url         : '/listing/{id}/{name}',
-            templateUrl : '/app/components/product/product.html',
-            controller  : 'ProductController as product'
+        .state('tab.product', {
+            url: '/listing/{id}/{name}',
+            views: {
+              templateUrl : 'app/components/product/product.html',
+              controller  : 'ProductController as product'
+            }
         })
 
         // login/signup page
-        .state('authenticate', {
-            url         : '/authenticate',
-            templateUrl : '/app/components/authenticate/authenticate.html',
-            controller  : 'AuthenticateController as authenticate'
+        .state('tab.authenticate', {
+            url: '/authenticate',
+            views: {
+              templateUrl : 'app/components/authenticate/authenticate.html',
+              controller  : 'AuthenticateController as authenticate'
+            }
         })
 
         // profile page
-        .state('profile', {
-            url         : '/profile/{user_name}',
-            templateUrl : '/app/components/profile/profile.html',
-            controller  : 'ProfileController as profile'
+        .state('tab.profile', {
+            url: '/profile/{user_name}',
+            views: {
+              templateUrl : 'app/components/profile/profile.html',
+              controller  : 'ProfileController as profile'
+            }
         })
 
         // checkout page
-        .state('checkout', {
-            url         : '/checkout/{id}',
-            templateUrl : '/app/components/checkout/checkout.html',
-            controller  : 'CheckoutController as checkout'
+        .state('tab.checkout', {
+            url: '/checkout/{id}',
+            views: {
+              templateUrl : 'app/components/checkout/checkout.html',
+              controller  : 'CheckoutController as checkout'
+            }
         })
 
         // checkout page
-        .state('admin', {
-            url         : '/admin',
-            templateUrl : '/app/components/admin/admin.html',
-            controller  : 'AdminController as admin'
+        .state('tab.admin', {
+            url: '/admin',
+            views: {
+              templateUrl : 'app/components/admin/admin.html',
+              controller  : 'AdminController as admin'
+            }
         });
 }

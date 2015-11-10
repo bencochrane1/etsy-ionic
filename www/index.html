@@ -6,58 +6,49 @@
     <title></title>
 
     <link href="lib/ionic/css/ionic.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
-
-    <base href="/">
-
-    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
     <link href="css/ionic.app.css" rel="stylesheet">
-    -->
 
-    <!-- ionic/angularjs js -->
     <script src="lib/ionic/js/ionic.bundle.js"></script>
-
-    <!-- cordova script (this will be a 404 during development) -->
+    <script src="lib/ngCordova/dist/ng-cordova.js"></script>
     <script src="cordova.js"></script>
 
-  <script src="./lib/stamplay-js-sdk/dist/stamplay.min.js"></script>
-  <script>
-      Stamplay.init('etsyapp');   // initiate stamplay app with app name
-  </script>
+    <script src="lib/stamplay-js-sdk/dist/stamplay.min.js"></script>
+    <script>
+        Stamplay.init('etsyapp');   // initiate stamplay app with app name
+    </script>
 
-  <script type="text/javascript" src="https://js.stripe.com/v2/"></script>
-  <script>
-    Stripe.setPublishableKey('pk_test_cowjCMlJWkHRyViJZgq0umM5');
-  </script>
+    <script type="text/javascript" src="https://js.stripe.com/v2/"></script>
+    <script>
+      Stripe.setPublishableKey('pk_test_cowjCMlJWkHRyViJZgq0umM5');
+    </script>
 
-  <!-- load our other JS dependencies -->
-  <!-- <script src="./lib/angular/angular.min.js"></script> -->
-  <script src="./lib/angular-stamplay/angular-stamplay.js"></script>
-  <script src="./lib/angular-ui-router/release/angular-ui-router.min.js"></script>
-    <script src="./lib/ng-file-upload/ng-file-upload.min.js"></script>
-    <script src="./lib/algoliasearch/dist/algoliasearch.angular.js"></script>
+    <!-- load our other JS dependencies -->
+    <!-- <script src="./lib/angular/angular.min.js"></script> -->
+    <script src="lib/angular-stamplay/angular-stamplay.js"></script>
+    <script src="lib/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <script src="lib/ng-file-upload/ng-file-upload.min.js"></script>
+    <script src="lib/algoliasearch/dist/algoliasearch.angular.js"></script>
 
   <!-- load all the parts for our custom angular app -->
   <!-- youd probably want to compile all this with a build system like gulp -->
   <!-- load our angular components -->
-  <script src="./app/components/home/home.js"></script>
-  <script src="./app/components/shop/shop.js"></script>
-  <script src="./app/components/product/product.js"></script>
-  <script src="./app/components/checkout/checkout.js"></script>
-  <script src="./app/components/profile/profile.js"></script>
-  <script src="./app/components/admin/admin.js"></script>
-  <script src="./app/components/authenticate/authenticate.js"></script>
+  <script src="app/components/home/home.js"></script>
+  <script src="app/components/shop/shop.js"></script>
+  <script src="app/components/product/product.js"></script>
+  <script src="app/components/checkout/checkout.js"></script>
+  <script src="app/components/profile/profile.js"></script>
+  <script src="app/components/admin/admin.js"></script>
+  <script src="app/components/authenticate/authenticate.js"></script>
 
   <!-- load our angular services -->
-  <script src="./app/shared/HeaderService.js"></script>
-  <script src="./app/shared/ProductService.js"></script>
-  <script src="./app/shared/UserService.js"></script>
-  <script src="./app/shared/OrderService.js"></script>
-  <script src="./app/shared/ShopService.js"></script>
+  <script src="app/shared/ProductService.js"></script>
+  <script src="app/shared/UserService.js"></script>
+  <script src="app/shared/OrderService.js"></script>
+  <script src="app/shared/ShopService.js"></script>
 
   <!-- load our core angular app -->
-  <script src="./app/app.routes.js"></script>
-  <script src="./app/app.js"></script>
+  <script src="app/app.routes.js"></script>
+  <script src="app/app.js"></script>
   </head>
   <body ng-app="etsyApp" ng-controller="MainController as main">
     <!--

@@ -11,13 +11,13 @@ angular
         'app.product',
         'app.profile',
         'app.shop',
-        'HeaderService',
         'UserService',
         'ProductService',
         'ShopService',
         'OrderService',
         'ngFileUpload',
-        'algoliasearch'
+        'algoliasearch',
+        'ngCordova'
     ])
 
 .run(function($ionicPlatform) {
@@ -32,11 +32,9 @@ angular
   });
 })
 
-.constant('BASEURL', 'https://etsyapp.stamplayapp.com/api/cobject/v1')
-
 .controller('MainController', MainController);
 
-function MainController(User, $rootScope, algolia, $q, $state) {
+function MainController(User, $rootScope, algolia, $q, $state, $cordovaOauth) {
 
   var main = this;
   main.logout = logout;
@@ -46,6 +44,24 @@ function MainController(User, $rootScope, algolia, $q, $state) {
 
   var client = algoliasearch('YA8AZYCAZM', '87db532ef8435bfe054fe57512b655ad');
   var index = client.initIndex('products');
+
+  function openSignupModal() {
+
+  }
+
+  function facebookLoginSuccess(response) {
+      console.log('response from fb for success:', response);
+
+  }
+
+  function facebookLoginFailure(response) {
+    console.log('response from fb for failure: ', response);
+  }
+
+  function facebookLogin() {
+    facebookConnectPlugin.login(['email', 'public_profile'], facebookLoginSuccess, facebookLoginFailure);
+  }
+
 
   function searchProducts(query) {
     var deferred = $q.defer();

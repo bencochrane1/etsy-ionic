@@ -32,8 +32,9 @@ function HomeController(Product, $q, $cordovaOauth, $cordovaFacebook, $cordovaAc
               email: profileInfo.email,
               picture: "http://graph.facebook.com/" + response.authResponse.userID + "/picture?type=large"
             }
+            console.log('user data in facebookLoginSuccess: ', userData);
             User.setFacebookUser(userData);
-            User.signupFacebookUser(userData);
+            User.signUpFacebookUser(userData);
             $state.go('tab.home');
           })
           .catch(function(response) {

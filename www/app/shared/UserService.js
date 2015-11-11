@@ -11,7 +11,8 @@ function UserService($stamplay, $q) {
         login: login,
         logout: logout,
         getFacebookUser,
-        setFacebookUser
+        setFacebookUser,
+        signUpFacebookUser
     };
 
     function getFacebookUser() {
@@ -26,11 +27,10 @@ function UserService($stamplay, $q) {
     function signUpFacebookUser(userData) {
       var deferred = $q.defer();
       var user = $stamplay.User().Model;
-      var newData = {
-
-      }
+      console.log('userData in signUpFacebookUser: ', userData);
       user.signup(userData)
       .then(function() {
+        console.log('it was ok')
         deferred.resolve();
       })
 

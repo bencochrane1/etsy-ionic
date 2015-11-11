@@ -40,10 +40,17 @@ function MainController(User, $rootScope, algolia, $q, $state, $cordovaOauth) {
   main.logout = logout;
   main.searchProducts = searchProducts;
   main.searchPicked = searchPicked;
+  main.facebookLogin = facebookLogin;
+  window.handleOpenURL = handleOpenURL;
   $rootScope.currentUser = {};
 
   var client = algoliasearch('YA8AZYCAZM', '87db532ef8435bfe054fe57512b655ad');
   var index = client.initIndex('products');
+
+
+  function handleOpenURL(url) {
+    alert("received url: " + url);
+  }
 
   function openSignupModal() {
 

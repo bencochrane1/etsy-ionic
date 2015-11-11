@@ -9,31 +9,45 @@ function UserService($stamplay, $q) {
         getCurrent: getCurrent,
         signup: signup,
         login: login,
-        logout: logout
+        logout: logout,
+        getFacebookUser,
+        setFacebookUser
     };
 
-    /**
-     * Get the current logged in user
-     */
+    function getFacebookUser() {
+      return JSON.parse(window.localStorage.facebook_user || '{}');
+    }
+
+    function setFacebookUser(userData) {
+      console.log('this is the user data', userData);
+      window.localStorage.facebook_user = JSON.stringify(userData);
+    }
+
+    function signUpFacebookUser(userData) {
+      var deferred = $q.defer();
+      var user = $stamplay.User().Model;
+      var newData = {
+
+      }
+      user.signup(userData)
+      .then(function() {
+        deferred.resolve();
+      })
+
+      return deferred.promise;
+    }
+
     function getCurrent() {
         var def = $q.defer();
-        console.log('we are in getcurrent')
-        // instantiate a new user model from the stamplay js sdk
         var user = $stamplay.User().Model;
-        console.log('we are in getcurrent', user)
         user.currentUser()
-            .then(function() {
-              console.log('we are in getcurrent then', user)
-                // send the entire user model back
-                def.resolve(user);
-            });
+        .then(function() {
+            def.resolve(user);
+        });
 
         return def.promise;
     }
 
-    /**
-     * Register a user with their name, email, and password
-     */
     function signup(data) {
         var def = $q.defer();
 
